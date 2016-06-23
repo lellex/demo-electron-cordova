@@ -27,7 +27,5 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "reader": "file:///home/lellex/Projets/demo/modules/reader",
-    "tts.webapi": "file:///home/lellex/Projets/demo/modules/tts.webapi"
   }
 }
