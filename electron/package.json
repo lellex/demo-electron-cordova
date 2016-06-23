@@ -27,5 +27,7 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
+    "reader": "git+https://github.com/lellex/reader.git",
+    "tts.webapi": "git+https://github.com/lellex/tts.webapi.git"
   }
 }
