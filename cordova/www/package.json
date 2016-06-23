@@ -9,7 +9,5 @@
   "author": "Alexandra JANIN",
   "license": "MIT",
   "dependencies": {
-    "reader": "file:///home/lellex/Projets/demo/modules/reader",
-    "tts.cordova": "file:///home/lellex/Projets/demo/modules/tts.cordova"
   }
 }

@@ -1,8 +1,0 @@
-{
-    "name": "tts.webapi",
-    "version": "1.0.0",
-    "main": "tts.webapi.js",
-    "author": "Alexandra JANIN",
-    "license": "MIT",
-    "description": ""
-}

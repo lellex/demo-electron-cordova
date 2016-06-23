@@ -3,6 +3,28 @@
 Le principe de cette démo est détaillé ici : https://makina-corpus.com/blog/metier/2016/construire-une-application-hybride-mobile-et-desktop-avec-cordova-et-electron
 
 
+## Installation / Ajout des dépendances
+
+Les modules utilisés ici sont déjà inclus dans le projet pour en simplifier le développement, mais on pourrait aussi utiliser des modules via github ou npm.
+
+Nous avons donc besoin de référencer dans notre package.json le chemin absolue de nos modules.
+
+### Electron
+
+```
+cd electron
+npm install ./../modules/reader
+npm install ./../modules/tts.webapi
+```
+
+### Cordova
+
+```
+cd cordova/www
+npm install ./../../modules/reader
+npm install ./../../modules/tts.cordova
+```
+
 ## Comment exécuter les projets cordova et electron ?
 
 ### Electron
