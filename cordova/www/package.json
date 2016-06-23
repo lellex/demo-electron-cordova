@@ -1,0 +1,15 @@
+{
+  "name": "cordova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandra JANIN",
+  "license": "MIT",
+  "dependencies": {
+    "reader": "file:///home/lellex/Projets/demo/modules/reader",
+    "tts.cordova": "file:///home/lellex/Projets/demo/modules/tts.cordova"
+  }
+}
