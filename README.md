@@ -2,28 +2,11 @@
 
 Le principe de cette démo est détaillé ici : https://makina-corpus.com/blog/metier/2016/construire-une-application-hybride-mobile-et-desktop-avec-cordova-et-electron
 
+Cette démo se base sur 3 modules qui se trouvent dans des dépots différents :
 
-## Installation / Ajout des dépendances
-
-Les modules utilisés ici sont déjà inclus dans le projet pour en simplifier le développement, mais on pourrait aussi utiliser des modules via github ou npm.
-
-Nous avons donc besoin de référencer dans notre package.json le chemin absolue de nos modules.
-
-### Electron
-
-```
-cd electron
-npm install ./../modules/reader
-npm install ./../modules/tts.webapi
-```
-
-### Cordova
-
-```
-cd cordova/www
-npm install ./../../modules/reader
-npm install ./../../modules/tts.cordova
-```
+* [reader](https://github.com/lellex/reader) : notre application principale, qui pourra si besoin include d'autres modules
+* [tts.webapi](https://github.com/lellex/tts.webapi) : un module spécifique pour utiliser le talk to speech dans un environnement web
+* [tts.cordova](https://github.com/lellex/tts.cordova) : un module spécifique pour utiliser le talk to speech dans un environnement cordova
 
 ## Comment exécuter les projets cordova et electron ?
 
@@ -54,36 +37,14 @@ cordova prepare
 cordova run android
 ```
 
-## Utilisation du module reader et des services TTS
+## Utilisation du module reader
 
-En JS, si on a accès à require, on charge les dépendances (electron)
+Pour développer notre application commune electron/cordova, il faudra modifier le module de base (ici reader).
 
-```
-var ttsWebApi = require('tts.webapi');
-var Reader = require('reader');
-```
-Ou dans le HTML (cordova)
+On peut par exemple cloner le repo à la racine et remplacer le chemin du module dans package.json.
 
 ```
-<script type="text/javascript" src="node_modules/tts.cordova/tts.cordova.js"></script>
-<script type="text/javascript" src="node_modules/reader/reader.js"></script>
-```
-
-Puis on initialise le module avec la configuration adéquate
-
-```
-Reader.init({
-  container: 'container',
-  tts: ttsWebApi,
-  text: 'Bonjour, bienvenue sur cette démonstration d\'une application Electron !'
-});
-
-```
-
-Pour modifier un module (exemple avec reader)
-
-```
-cd modules/reader
+cd reader
 npm install
 npm run start  # Webpack with --watch option
 npm run build  # Build project

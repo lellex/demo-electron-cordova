@@ -9,5 +9,7 @@
   "author": "Alexandra JANIN",
   "license": "MIT",
   "dependencies": {
+    "reader": "git+https://github.com/lellex/reader.git",
+    "tts.cordova": "git+https://github.com/lellex/tts.cordova.git"
   }
 }
